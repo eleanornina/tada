@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-</script>
-    <title>TaDa</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Add custom CSS here -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-</head>
-
+<?php include("includes/header.inc.php"); ?>
 <body>
-
-    <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+	 <!-- Side Menu -->
+    
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -46,76 +26,183 @@
             </li>
             <li><a href="#">Chores</a>
             </li>
-             <li><a href="index.php">Logout</a>
+            <hr>
+             <li><a href="index.php"><i class="fa fa-sign-out"></i> Logout</a>
             </li>
         </ul>
     </div>
     <!-- /Side Menu -->
 
-    <!-- Full Page Image Header Area -->
-    <div id="top" class="header">
-        
-          <div class="container">
-          
-            <div class="row">
-            <img src="img/logomini.png" />
-                <div class="col-lg-12" id="blurBack">
-                <h3>Shopping</h3>
-                <div class="col-lg-9">
-                   <input type="text" class="form-control" placeholder="Text input">
-                 </div>
-               <div class="col-lg-2">
-               
-               <div class="btn-group">
-                  <button type="button" class="btn btn-default">Priority Level</button>
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li id="highLev" ><a href="#">Very Important</a></li>
-                    <li id="midLev"><a href="#">Important</a></li>
-                    <li id="lowLev"><a href="#">Get done soon</a></li>
-                   
-                  </ul>
-                </div>
-               
-      
-                </div>
-                <button type="button" class="btn btn-success">Add</button>
-                <hr>
-                <div class="col-md-12"> 
-                     <div class="col-md-12" id="listItem"> 
-                         <input type="checkbox"> Pink Socks Very important
-                             <div class="itemRight">
-                                 <a href="#" class="fa fa-trash-o"></a> 
-                                 <a href="#" class="fa fa-pencil fa-fw"></a> 
-                             </div>
-                         </input>
-                     </div>
-                 </div>
-                 <div class="col-lg-12" id="completeItem">
-                 <hr>
-                     <h3>Completed</h3>
-                         <div class="col-lg-12" id="listItem" style="text-decoration:line-through;"> V-neck shirts Important
-                             <div class="itemRight">
-                                 <a href="#" class="fa fa-trash-o"></a> 
-                                 <a href="#" class="fa fa-pencil fa-fw"></a> 
-                             </div>
-                         </div>
-                     </div>
-                 
-            </div><!-- close col-lg-12 -->
-          </div><!-- close row -->
-       </div><!-- close container -->
-   </div>
-    <!-- /Full Page Image Header Area -->
+
+<div class="container">
+	<img src="img/logomini.png">
+	<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle pull-right"><i class="fa fa-bars"></i></a>
+	<div class="jumbotron">
+    	<div class="row">
+
+			<div class="col-sm-12">
+				<h4 class="listTitle">Shopping <i class="fa fa-share" data-title=" Share" data-toggle="modal" data-target="#share"></i></h4> 
+				<h4>Todo</h4>
+				<hr class="listdiv">
+				<ul class="list-group" id="list">
+					<li class="list-group-item" >
+						<input type="checkbox">
+						Vet Appointment!
+						<span class="show-menu">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</span>
+						<ul class="list-group-submenu">
+							<li class="list-group-submenu-item danger" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-remove"></span></li>
+							<li class="list-group-submenu-item success" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></li>
+						</ul>
+					</li>
+					<li class="list-group-item">
+						<input type="checkbox">
+						Dinner with boss!
+						<span class="show-menu">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</span>
+						<ul class="list-group-submenu">
+							<li class="list-group-submenu-item danger"><span class="glyphicon glyphicon-remove"></span></li>
+							<li class="list-group-submenu-item success"><span class="glyphicon glyphicon-pencil"></span></li>
+						</ul>
+					</li>
+					
+				</ul>
+				<h4>Completed</h4>
+				<hr class="listdiv">
+
+				<ul class="list-group">
+					<li class="list-group-item">
+						<input type="checkbox">
+						Grocories
+						<span class="show-menu">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</span>
+						<ul class="list-group-submenu">
+							<li class="list-group-submenu-item danger"><span class="glyphicon glyphicon-remove"></span></li>
+							<li class="list-group-submenu-item success"><span class="glyphicon glyphicon-pencil"></span></li>
+						</ul>
+					</li>
+					<li class="list-group-item">
+						<input type="checkbox">
+						Homework
+
+						<span class="show-menu">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</span>
+						<ul class="list-group-submenu">
+							<li class="list-group-submenu-item danger"><span class="glyphicon glyphicon-remove"></span></li>
+							<li class="list-group-submenu-item success"><span class="glyphicon glyphicon-pencil"></span></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+<div class="modal fade" id="edit" >
+      <div class="modal-dialog">
+	    <div class="modal-content">
+	          <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	            <h4 class="modal-title" id="Heading">Edit Your Detail</h4>
+	          </div>
+	          <div class="modal-body">
+		          <div class="form-group">
+		            <input class="form-control " type="text" placeholder="Start typing">
+		          </div>
+	          <div class="form-group">
+	          	<input class="form-control " type="text" placeholder="mm/dd/yy">
+	          </div>
+	           <div class="form-group">
+		            <select type="text" class="form-control multiselect multiselect-icon" role="multiselect">          
+		              <option class="vryImp" data-icon="glyphicon-camera" selected="selected">Very Important</option>          
+		              <option class="medImp" data-icon="glyphicon-link">Important</option>
+		              <option class="notImp" data-icon="glyphicon-pencil">Get done soon</option>
+		             </select> 
+	          </div>
+	        
+	    </div>
+          <div class="modal-footer ">
+        <button type="button" class="btn btn-success btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+    
+    <!-- THIS IS THE SHARING MODAL! -->
+    <div class="modal fade" id="share" >
+      <div class="modal-dialog">
+	    <div class="modal-content">
+	          <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	            <h4 class="modal-title" id="Heading">Share With Who?</h4>
+	          </div>
+	          <div class="modal-body">
+		          <div class="form-group">
+		            <input class="form-control " type="text" placeholder="Email Address">
+		          </div>
+	          <div class="form-group">
+	          	<input class="form-control " type="text" placeholder="Title">
+	          </div>
+	           <div class="form-group">
+		            <select type="text" class="form-control multiselect multiselect-icon" role="multiselect">          
+		              <option class="vryImp" data-icon="glyphicon-camera" selected="selected">Grant Full Access</option>          
+		              <option class="medImp" data-icon="glyphicon-link">Editing Only</option>
+		              <option class="notImp" data-icon="glyphicon-pencil">Viewing Only</option>
+		             </select> 
+	          </div>
+	        
+	    </div>
+          <div class="modal-footer ">
+        <button type="button" class="btn btn-success btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Share</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+    
+    
+      <!-- THIS IS THE DELETE MODAL! -->
+    
+    <div class="modal fade" id="delete">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="Heading">Delete this entry</h4>
+      </div>
+          <div class="modal-body">
+       
+       <div class="alert alert-warning"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+       
+      </div>
+        <div class="modal-footer ">
+        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+        <button type="button" class="btn btn-danger" ><span class="glyphicon glyphicon-remove"></span> No</button>
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div>
+    
 
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script>
+</div>
+<script type="text/javascript">
+$(function () {
+    $('.list-group-item > .show-menu').on('click', function(event) {
+		event.preventDefault();
+		$(this).closest('li').toggleClass('open');
+	});
+});
+</script>
+ <script>
 		$(document).ready(function(){
 		  $("#newBtn").click(function(){
 			$("#creatNew").toggle();
@@ -153,7 +240,6 @@
         });
     });
     </script>
-
+    
 </body>
-
 </html>

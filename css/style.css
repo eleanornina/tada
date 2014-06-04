@@ -1,12 +1,166 @@
+#loginCenter {
+text-align: center;
+}
+#loginCenter img{
+  margin-bottom: 5%;
+}
+
+input.remeberme{
+  margin-left: -210px;
+  width: 25px;
+
+}
+
+
+#creatSub{
+  margin-top: 10%;
+}
+.listTitle{
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+.listdiv{
+  margin-top: -5px;
+}
+#list{
+  padding-bottom: 15px;
+}
+
+/*...^(up)..code I added... */
+
+
+
+.jumbotron {
+
+width: 40rem;
+
+min-height: 450px;
+/* top: 0; */
+/* bottom: 0; */
+left: 0;
+right: 0;
+position: absolute;
+margin: 4rem auto;
+background-color: rgba(255, 102, 74, .5);
+padding: 2rem;
+
+}
+
+.container .glyphicon-list-alt {
+  font-size: 10rem;
+  margin-top: 3rem;
+  color: #f96145;
+}
+
+
+h2 {
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: #ababab;
+}
+
+
+.list-group-item:first-child, .list-group-item:last-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  overflow: hidden;
+}
+.list-group-item {
+  border-left: 0px solid rgb(221, 221, 221);
+  border-right: 0px solid rgb(221, 221, 221);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.list-group-item > .show-menu {
+  position: absolute;
+  height: 100%; width:24px;
+  top: 0px; right: 0px;
+  
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.list-group-item > .show-menu > span {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+
+}
+.list-group-submenu {
+  position: absolute;
+  top: 0px;
+  right: -88px;
+  white-space: nowrap;
+  list-style: none;
+  padding-left: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.list-group-submenu .list-group-submenu-item {
+  float: right;
+  white-space: nowrap;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: rgb(51, 51, 51);
+  color: rgb(235, 235, 235);
+}
+
+.list-group-item.open > .show-menu {
+  right: 88px;
+}
+.list-group-item.open .list-group-submenu{
+  right: 0px;
+}
+
+.list-group-submenu .list-group-submenu-item.success {
+  color: rgb(255, 255, 255);
+  background-color: rgb(92, 184, 92);
+}
+
+.list-group-submenu .list-group-submenu-item.danger {
+  color: rgb(255, 255, 255);
+  background-color: rgb(217, 83, 79);
+}
+#Heading{
+  color: black;
+}
+.vryImp{
+  color: #d2322d;
+}
+.medImp{
+  color: #f0ad4e;
+}
+.notImp{
+  color: #5cb85c;
+}
+
+
+
+/* mel---*/
 #highLev a:hover{
-	background: rgba(242,103,78,1.00);
-		}
+  background: rgba(242,103,78,1.00);
+    }
 #midLev a:hover{
-	background: #ffc800;
-		}
+  background: #ffc800;
+    }
 #lowLev a:hover{
-	background: #47a447;
-		}
+  background: #47a447;
+    }
 #blurBack{
  background:rgba(202, 202, 202, 0.5);
  -webkit-border-radius: 5px;
@@ -20,6 +174,8 @@ margin-top: 2%;
 
 html,
 body {
+    background: url(../img/bg.jpg) no-repeat center center fixed; 
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
@@ -43,7 +199,7 @@ body {
   margin-right: -250px;
   right: 0;
   width: 250px;
-  background: #000;
+  background: rgba(160, 160, 160, 1);
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -70,7 +226,7 @@ body {
 }
 
 .sidebar-nav li a {
-  color: #999999;
+  color: rgba(255, 255, 255, 0.76);
   display: block;
   text-decoration: none;
 }
@@ -101,12 +257,6 @@ body {
   background: none;
 }
 
-#menu-toggle {
-  top: 0;
-  right: 0;
-  position: fixed;
-  z-index: 1;
-}
 
 #sidebar-wrapper.active {
   right: 250px;
@@ -236,9 +386,9 @@ i.scroll:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-	
+  
   .header {
-	background: url(../img/bg.jpg) no-repeat center center scroll;
+  background: url(../img/bg.jpg) no-repeat center center scroll;
    -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -246,46 +396,58 @@ i.scroll:hover {
   }
 
   .callout {
-	background: url(../img/callout.jpg) no-repeat center center scroll; 
+  background: url(../img/callout.jpg) no-repeat center center scroll; 
   }
 
   .map {
-	height: 75%;
+  height: 75%;
   }
 
 }
 /*************** Icon Style ***************/
 .fa.fa{
-	color: rgba(242,103,78,1.00);
-	
-	}
-h3{
-	color: rgba(242,103,78,1.00);
+  color: rgba(255,255,255,1.00);
+  
+  }
+h3, h2{
+  color: rgba(255, 255, 255, 1);
 }
-#formBoxes{	
-	background-color: rgba(239,237,237,1.00);
-	margin-left:10px;
-	border:thin;
-	border-radius:10px;
+#formBoxes{ 
+  background-color: rgba(239,237,237,1.00);
+  margin-left:10px;
+  border:thin;
+  border-radius:10px;
 }
 #listItem{
-	background-color: rgba(239,237,237,1.00);
-	height:40px;
-	padding-top:10px;
-	border-radius:5px;background-color:white;
-	
+  background-color: rgba(239,237,237,1.00);
+  height:40px;
+  padding-top:10px;
+  border-radius:5px;background-color:white;
+  
 }
 .itemRight{
-	float:right;
-	
+  float:right;
+  
 }
 #completeItem{
-	margin-top:90px;
-	}
+  margin-top:90px;
+  }
 
+#side-login{
+  float:right;
+  opacity: .8;
+  margin-top:15px;  
+}
 
-
-
-
-
-
+footer{
+	position:absolute;
+	width:100%;
+	color: rgba(255, 102, 74, .5);
+}
+.fa.fa{
+	
+}
+p.footer {
+	font-size:12px;
+	
+}
